@@ -1,5 +1,12 @@
+import LabelImpl from './label-impl';
+
 export default function View() {
+  const impl =
+      new LabelImpl({
+        getWidth: () => 300,
+        getHeight: () => 100,
+      });
   return (
-      <label data-testid='view-id' className='view-class'>Hello World</label>
+      <label>{`${impl.getSize()} pixels`}</label>
   );
 }
