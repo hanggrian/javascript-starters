@@ -1,4 +1,4 @@
-import LabelImpl from '@library/library/src/label-impl';
+import LabelImpl from '@library/library/label-impl';
 
 class LabelExtImpl extends LabelImpl {
   constructor(label) {

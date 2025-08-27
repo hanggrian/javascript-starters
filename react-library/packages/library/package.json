@@ -13,6 +13,10 @@
   "license": "Apache-2.0",
   "author": "John Doe <johndoe@mail.com>",
   "type": "module",
+  "files": ["src/"],
+  "exports": {
+    "./label-impl": "./src/label-impl.jsx"
+  },
   "scripts": {
     "test": "vitest --run __tests__",
     "coverage": "vitest run --coverage --reporter=junit --outputFile=test-report.junit.xml",

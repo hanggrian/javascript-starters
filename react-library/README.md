@@ -10,7 +10,7 @@ Some cool stuff going on here.
 ## Download
 
 ```sh
-npm install library library-extension
+npm install @library/library @library/library-extension
 ```
 
 ## Usage

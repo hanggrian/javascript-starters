@@ -1,4 +1,4 @@
-import LabelExtImpl from '@library/library-extension/src/label-ext-impl';
+import LabelExtImpl from '@library/library-extension/label-ext-impl';
 
 /**
  * @returns {JSX.Element}
@@ -12,7 +12,7 @@ function View() {
         getHeight: () => 100,
       });
   return (
-      <label>{`${impl.getSize()} pixels at ${impl.getPosition()}`}</label>
+      <label>{`${impl.getSize()} pixels at ${impl.getPosition()}.`}</label>
   );
 }
 

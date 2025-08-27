@@ -7,6 +7,6 @@ export default function View() {
         getHeight: () => 100,
       });
   return (
-      <label>{`${impl.getSize()} pixels`}</label>
+      <label>{`${impl.getSize()} pixels.`}</label>
   );
 }
