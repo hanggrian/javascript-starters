@@ -6,9 +6,9 @@
 *.iml
 .idea/
 node_modules/
+docs/
 coverage/
 dist/
-docs/
 test-report.junit.xml
 
 # Ruby
