@@ -1,12 +1,11 @@
 {
-  "name": "sample",
   "private": true,
+  "name": "sample",
   "type": "module",
   "files": [
     "src/"
   ],
   "scripts": {
-    "test": "vitest --run __tests__",
     "coverage": "vitest run --coverage --reporter=junit --outputFile=test-report.junit.xml",
     "docs": "jsdoc -c ../../jsdoc.json"
   },

@@ -1,4 +1,5 @@
 {
+  "private": true,
   "type": "module",
   "workspaces": [
     "packages/library",
@@ -7,7 +8,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint packages/**/*.jsx",
+    "lint": "eslint packages/**/src/",
     "preview": "vite preview",
     "test": "npm run test --workspaces",
     "coverage": "npm run coverage --workspaces",
