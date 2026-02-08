@@ -1,14 +1,14 @@
 {
   "name": "@library/library-extension",
   "version": "0.1",
-  "description": "A very awesome app",
-  "homepage": "https://github.com/johndoe/app#readme",
+  "description": "A very awesome library",
+  "homepage": "https://github.com/johndoe/library#readme",
   "bugs": {
-    "url": "https://github.com/johndoe/app/issues"
+    "url": "https://github.com/johndoe/library/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/johndoe/app.git"
+    "url": "git+https://github.com/johndoe/library.git"
   },
   "license": "Apache-2.0",
   "author": "John Doe <johndoe@mail.com>",
@@ -20,7 +20,7 @@
     "./label-ext-impl": "./src/label-ext-impl.jsx"
   },
   "scripts": {
-    "test": "vitest --run __tests__",
+    "test": "vitest --run src/__tests__/",
     "coverage": "vitest run --coverage --reporter=junit --outputFile=test-report.junit.xml",
     "docs": "jsdoc -c ../../jsdoc.json"
   },

@@ -1,21 +1,18 @@
 import {afterEach, beforeEach, describe, expect, it} from 'vitest';
 import '@testing-library/jest-dom';
-import {render} from '@testing-library/react';
-import LabelExtImpl from '../src/label-ext-impl';
+import LabelExtImpl from '../label-ext-impl.jsx';
 import sinon from 'sinon';
 
 describe(
     'LabelExtImpl',
     () => {
       let label;
-      let app;
 
       beforeEach(() => {
         label = {
           getX: sinon.stub(),
           getY: sinon.stub(),
         };
-        app = render(<div></div>);
       });
 
       it(

@@ -38,8 +38,8 @@ export default defineConfig([
       ],
 
       // code within `</>` cannot be captured
-      'no-unused-vars': 'warn',
-      'no-undef': 'warn',
+      'no-unused-vars': 'off',
+      'no-undef': 'off',
     },
   },
 ]);
