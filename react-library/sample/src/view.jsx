@@ -1,9 +1,9 @@
-import LabelExtImpl from '@library/library-extension/label-ext-impl';
+import LabelExtImpl from 'library-extension/label-ext-impl';
 
 /**
  * @returns {JSX.Element}
  */
-function View() {
+export default function View() {
   const impl =
       new LabelExtImpl({
         getX: () => 50,
@@ -14,6 +14,4 @@ function View() {
   return (
       <label>{`${impl.getSize()} pixels at ${impl.getPosition()}.`}</label>
   );
-}
-
-export default View;
+};

@@ -4,18 +4,19 @@ orbs:
   codecov: codecov/codecov@5.4.3
 
 executors:
-  base:
-    docker:
-      - image: cimg/base:stable
   node:
     docker:
-      - image: cimg/node:22.15
+      - image: cimg/node:lts
+  renovate:
+    docker:
+      - image: renovate/renovate:latest
 
 jobs:
   setup-workspace:
-    executor: base
+    executor: node
     steps:
       - checkout
+      - run: pnpm i
       - persist_to_workspace:
           root: .
           paths: [.]
@@ -24,18 +25,19 @@ jobs:
     steps:
       - attach_workspace:
           at: .
-      - run:
-          name: Static analysis
-          command: npm i && npm run lint
+      - run: pnpm lint
   upload-coverage:
     executor: node
     steps:
       - attach_workspace:
           at: .
-      - run:
-          name: Dynamic analysis
-          command: npm i && npm test && npm run coverage
+      - run: pnpm -r test
+      - run: pnpm -r coverage
       - codecov/upload
+  activate-renovatebot:
+    executor: renovate
+    steps:
+      - run: renovate
 
 workflows:
   code-analysis:
@@ -45,3 +47,4 @@ workflows:
           requires: [setup-workspace]
       - upload-coverage:
           requires: [setup-workspace]
+      - activate-renovatebot

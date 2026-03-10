@@ -1,31 +1,19 @@
 {
-  "name": "my-app",
-  "version": "0.1",
-  "description": "A very awesome app",
-  "homepage": "https://github.com/johndoe/app#readme",
-  "bugs": {
-    "url": "https://github.com/johndoe/app/issues"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/johndoe/app.git"
-  },
-  "license": "Apache-2.0",
-  "author": "John Doe <johndoe@mail.com>",
+  "name": "my-application",
+  "private": true,
   "type": "module",
   "files": [
     "src"
   ],
   "scripts": {
-    "dev": "vite",
     "build": "vite build",
-    "lint": "eslint src/",
     "preview": "vite preview",
+    "lint": "eslint src/",
     "test": "vitest --run src/__tests__/",
     "coverage": "vitest run --coverage --reporter=junit --outputFile=test-report.junit.xml"
   },
+  "packageManager": "pnpm@10.30.3",
   "dependencies": {
-    "jsdom": "^26.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "vite": "^6.3.4"
@@ -34,7 +22,6 @@
     "@eslint/js": "^9.25.1",
     "@stylistic/eslint-plugin-js": "^4.2.0",
     "@testing-library/dom": "^10.4.0",
-    "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
     "@testing-library/user-event": "^14.6.1",
     "@types/css-modules": "^1.0.5",
