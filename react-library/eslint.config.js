@@ -4,10 +4,10 @@ import eslintPluginReactRefresh from 'eslint-plugin-react-refresh';
 import eslintPluginJs from '@stylistic/eslint-plugin-js';
 import globals from 'globals';
 import js from '@eslint/js';
-import {defineConfig} from 'eslint/config';
+import { defineConfig } from 'eslint/config';
 
 export default defineConfig([
-  {ignores: ['dist']},
+  { ignores: ['dist'] },
   {
     files: ['**/*.{js,jsx}'],
     languageOptions: {
@@ -19,7 +19,7 @@ export default defineConfig([
       parserOptions: {
         ecmaFeatures: {
           jsx: true,
-        }
+        },
       },
     },
     plugins: {
@@ -34,7 +34,7 @@ export default defineConfig([
       ...eslintPluginReactHooks.configs.recommended.rules,
       'react-refresh/only-export-components': [
         'warn',
-        {allowConstantExport: true},
+        { allowConstantExport: true },
       ],
 
       // code within `</>` cannot be captured

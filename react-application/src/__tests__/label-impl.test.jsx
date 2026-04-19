@@ -1,7 +1,7 @@
-import {afterEach, beforeEach, describe, expect, it} from 'vitest';
-import {render} from '@testing-library/react';
+import { afterEach, beforeEach, describe, expect, it } from 'vitest';
+import { render } from '@testing-library/react';
 import LabelImpl from '../label-impl.jsx';
-import {assert, restore, stub} from 'sinon';
+import { assert, restore, stub } from 'sinon';
 
 describe(
     'LabelImpl',

@@ -1,6 +1,6 @@
-import {afterEach, beforeEach, describe, expect, it} from 'vitest';
+import { afterEach, beforeEach, describe, expect, it } from 'vitest';
 import LabelImpl from '../label-impl.jsx';
-import {assert, restore, stub} from 'sinon';
+import { assert, restore, stub } from 'sinon';
 
 describe(
     'LabelImpl',
