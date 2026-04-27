@@ -13,7 +13,9 @@
     "plugins/markdown"
   ],
   "markdown": {
-    "tags": ["load"]
+    "tags": [
+      "load"
+    ]
   },
   "opts": {
     "destination": "docs",

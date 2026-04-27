@@ -8,7 +8,7 @@
   "scripts": {
     "build": "vite build",
     "preview": "vite preview",
-    "lint": "eslint src/",
+    "lint": "eslint src/ && stylebook *.md *.json",
     "test": "vitest --run src/__tests__/",
     "coverage": "vitest run --coverage --reporter=junit --outputFile=test-report.junit.xml"
   },
@@ -23,6 +23,8 @@
   },
   "devDependencies": {
     "@eslint/js": "^9.25.1",
+    "@hanggrian/stylebook": "0.1.0",
+    "@prantlf/jsonlint": "17.0.1",
     "@stylistic/eslint-plugin-js": "^4.2.0",
     "@testing-library/dom": "^10.4.0",
     "@testing-library/react": "^16.2.0",
@@ -37,6 +39,7 @@
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.19",
     "globals": "^16.0.0",
+    "markdownlint-cli2": "0.22.0",
     "sinon": "^21.0.1",
     "vitest": "^4.1.4",
     "vitest-dom": "^0.1.1"

@@ -2,6 +2,10 @@ name: code-analysis
 
 on: [push, pull_request]
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
 env:
   GRADLE_USER_HOME: ${{ github.workspace }}/.gradle/
   GRADLE_OPTS: -Dorg.gradle.daemon=false
@@ -23,7 +27,7 @@ jobs:
 
       - uses: ./.github/actions/setup-workspace
 
-      - run: pnpm -r coverage
+      - run: pnpm coverage
 
       - if: github.ref == 'refs/heads/main'
         uses: codecov/codecov-action@v6
