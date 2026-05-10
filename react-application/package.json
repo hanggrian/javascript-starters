@@ -6,16 +6,17 @@
     "src"
   ],
   "scripts": {
+    "prepare": "pnpm build",
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint src/ && stylebook *.md *.json",
-    "test": "vitest --run src/__tests__/",
+    "test": "vitest run",
     "coverage": "vitest run --coverage --reporter=junit --outputFile=test-report.junit.xml"
   },
   "engines": {
     "node": ">=12.0.0"
   },
-  "packageManager": "pnpm@10.33.0",
+  "packageManager": "pnpm@11.0.8",
   "dependencies": {
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

@@ -20,7 +20,7 @@
     "./label-impl": "./src/label-impl.jsx"
   },
   "scripts": {
-    "test": "vitest --run src/__tests__/",
+    "test": "vitest run",
     "coverage": "vitest run --coverage --reporter=junit --outputFile=test-report.junit.xml"
   },
   "engines": {

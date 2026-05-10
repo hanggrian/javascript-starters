@@ -17,6 +17,7 @@ runs:
           .pnpm-store/
           node_modules/
         key: pnpm-${{ hashFiles('pnpm-lock.yaml') }}
+        restore-keys: pnpm-
 
     - shell: bash
-      run: pnpm i
+      run: pnpm ci

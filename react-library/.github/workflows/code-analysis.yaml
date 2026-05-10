@@ -6,13 +6,9 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
-env:
-  GRADLE_USER_HOME: ${{ github.workspace }}/.gradle/
-  GRADLE_OPTS: -Dorg.gradle.daemon=false
-
 jobs:
   run-lint:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v6
 
@@ -21,7 +17,7 @@ jobs:
       - run: pnpm lint
 
   upload-coverage:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v6
 

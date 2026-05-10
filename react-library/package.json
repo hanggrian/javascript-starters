@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "prepare": "pnpm build",
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint packages/**/src/ && stylebook *.md *.json packages/library/*.json packages/library-extension/*.json",
@@ -11,7 +12,7 @@
   "engines": {
     "node": ">=12.0.0"
   },
-  "packageManager": "pnpm@10.33.0",
+  "packageManager": "pnpm@11.0.8",
   "devDependencies": {
     "@eslint/js": "^9.25.1",
     "@hanggrian/stylebook": "0.1.0",
