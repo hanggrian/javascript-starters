@@ -5,5 +5,9 @@
   ],
   "mode": "full",
   "prCreation": "not-pending",
-  "internalChecksFilter": "strict"
+  "internalChecksFilter": "strict",
+  "ignoreDeps": [
+    "eslint",
+    "@eslint/js"
+  ]
 }
